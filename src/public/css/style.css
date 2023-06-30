@@ -1,0 +1,226 @@
+:root {
+  --dracBlue-dark: #383a59;
+  --dracBlue: #303440;
+  --dracYellow: #ffff80;
+  --dracGreen: #8bff80;
+  --dracPurple: #9580ff;
+  --dracPurple-dark: #7970a9;
+  --dracPink: #ff80bf;
+  --dracPeach: #ff9580;
+  --dracOrange: #ffc97f;
+  --dracLightblue: #80ffea;
+  --dracDarkestBlue: #21242b;
+  --dracWhite: #f7f8f2;
+  --dracGray: #707070;
+  --dracNav: #282a36;
+  --dracRed: #ff5555;
+}
+
+
+/* BACKGROUND COLOR*/
+
+.bg-dracbluedark{
+    background-color: var(--dracBlue-dark);
+}
+
+.bg-dracblue{
+    background-color: var(--dracBlue);
+}
+
+.bg-dracyellow{
+    background-color: var(--dracYellow);
+}
+
+.bg-dracgreen{
+    background-color: var(--dracGreen);
+}
+
+.bg-dracpurple{
+    background-color: var(--dracPurple);
+}
+
+.bg-dracpurpledark{
+    background-color: var(--dracPurple-dark);
+}
+
+.bg-dracpink{
+    background-color: var(--dracPink);
+}
+
+.bg-dracpeach{
+    background-color: var(--dracPeach);
+}
+
+.bg-dracorange{
+    background-color: var(--dracOrange);
+}
+
+.bg-lightblue{
+    background-color: var(--dracLightblue);
+}
+
+.bg-dracdarkestblue{
+    background-color: var(--dracDarkestBlue);
+}
+
+.bg-dracwhite{
+    background-color: var(--dracWhite);
+}
+
+.bg-dracgray{
+    background-color: var(--dracGray);
+}
+
+.bg-dracred{
+    background-color: var(--dracRed);
+}
+
+/* TEXT COLOR*/
+
+.text-dracbluedark{
+    color: var(--dracBlue-dark);
+}
+
+.text-dracblue{
+    color: var(--dracBlue);
+}
+
+.text-dracyellow{
+    color: var(--dracYellow);
+}
+
+.text-dracgreen{
+    color: var(--dracGreen);
+}
+
+.text-dracpurple{
+    color: var(--dracPurple);
+}
+
+.text-dracpurpledark{
+    color: var(--dracPurple-dark);
+}
+
+.text-dracpink{
+    color: var(--dracPink);
+}
+
+.text-dracpeach{
+    color: var(--dracPeach);
+}
+
+.text-dracorange{
+    color: var(--dracOrange);
+}
+
+.text-lightblue{
+    color: var(--dracLightblue);
+}
+
+.text-dracdarkestblue{
+    color: var(--dracDarkestBlue);
+}
+
+.text-dracwhite{
+    color: var(--dracWhite);
+}
+
+.text-dracgray{
+    color: var(--dracGray);
+}
+
+.text-dracred{
+    color: var(--dracRed);
+}
+
+
+/*  BOTONES COLOR */
+
+.btn-dracbluedark{
+    background-color: var(--dracBlue-dark);
+}
+
+.btn-dracblue{
+    background-color: var(--dracBlue);
+}
+
+.btn-dracyellow{
+    background-color: var(--dracYellow);
+}
+
+.btn-dracgreen{
+    background-color: var(--dracGreen);
+}
+
+.btn-dracpurple{
+    background-color: var(--dracPurple);
+}
+
+.btn-dracpurpledark{
+    background-color: var(--dracPurple-dark);
+}
+
+.btn-dracpink{
+    background-color: var(--dracPink);
+}
+
+.btn-dracpeach{
+    background-color: var(--dracPeach);
+}
+
+.btn-dracorange{
+    background-color: var(--dracOrange);
+}
+
+.btn-lightblue{
+    background-color: var(--dracLightblue);
+}
+
+.btn-dracdarkestblue{
+    background-color: var(--dracDarkestBlue);
+}
+
+.btn-dracwhite{
+    background-color: var(--dracWhite);
+}
+
+.btn-dracgray{
+    background-color: var(--dracGray);
+}
+
+.btn-dracred{
+    background-color: var(--dracRed);
+}
+
+/*OTROS*/
+
+
+.btn:hover {
+    color: var(--dracWhite) !important;
+    background-color: var(--dracPurple-dark) !important;
+    border-color: var(--dracPurple) !important;
+}
+
+.form-control:focus {
+    color: var(--dracWhite);
+    background-color: var(--dracBlue);
+    border-color: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.border-color{
+    border: 1px solid var(--dracBlue) !important;
+}
+
+
+.center-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.border-bottom{
+    border-radius: 0px !important;
+}
