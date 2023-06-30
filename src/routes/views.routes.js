@@ -3,7 +3,8 @@ import {
 } from "express";
 import {
     loginUser,
-    redirectLoginUser
+    redirectLoginUser,
+    sucursales
 } from "../controllers/view.controller";
 
 
@@ -13,6 +14,8 @@ const route = Router();
 
 route.get("/login", loginUser);
 route.get('/', redirectLoginUser);
+
+route.get('/sucursales', sucursales);
 
 
 

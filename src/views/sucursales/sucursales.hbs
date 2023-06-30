@@ -1,0 +1,23 @@
+<body class="bg-dracdarkestblue">
+    <div class="d-flex" id="wrapper">
+        {{> sidebar}}
+        <div id="page-content-wrapper">
+            {{> navbar}}
+            <div class="container-fluid px-4">
+                <h1>Contenido</h1>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+
+        toggleButton.onclick = function () {
+            el.classList.toggle("toggled");
+        };
+    </script>
