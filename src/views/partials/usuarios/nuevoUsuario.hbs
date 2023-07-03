@@ -1,0 +1,195 @@
+<!-- Modal -->
+<div class="modal fade" id="nuevoUsuarioModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dracblueDark">
+      <div class="modal-header bg-dracblue">
+        <h1 class="modal-title  text-dracorange" id="staticBackdropLabel">Nuevo Usuario</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form role="form" id="formNuevoUsuario">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card bg-dracblueDark text-dracwhite">
+                        <div class="card-header border-success bg-dracblueDark">
+                            <h3>Datos del usuario</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Número de identidad:</label>
+                                        <div class="input-group ">
+                                            <div class="input-group-text bg-dracblue border-0"><i class="fas fa-id-card text-white"></i></div>
+                                            <input type="text" class="bg-dracblue border-0 form-control border-bottom text-dracwhite" id="dniEmpleado" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Número de empleado:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text bg-dracblue border-0"><i class="fa-solid fa-clipboard-user text-white"></i></div>
+                                            <input type="text" class="bg-dracblue border-0 form-control border-bottom text-dracwhite" id="numEmpleado" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Nombre Completo:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text bg-dracblue border-0"><i class="fa-solid fa-user text-white"></i></div>
+                                            <input type="text" class="bg-dracblue border-0 form-control border-bottom text-dracwhite" id="nombreEmpleado" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Fecha de nacimiento:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text bg-dracblue border-0"><i class="fa-solid fa-calendar-days text-white"></i></div>
+                                            <input type="date" class="bg-dracblue border-0 form-control border-bottom text-dracwhite" id="fechaNacimiento" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Teléfono:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text bg-dracblue border-0"><i class="fa-solid fa-mobile text-white"></i></div>
+                                            <input type="text" class="bg-dracblue border-0 form-control border-bottom text-dracwhite" id="telefono" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Fecha de ingreso:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text bg-dracblue border-0"><i class="fa-regular fa-calendar-check text-white"></i></div>
+                                            <input type="date" class="bg-dracblue border-0 form-control border-bottom text-dracwhite" id="fechaIngreso" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Numero de cuenta:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text bg-dracblue border-0"><i class="fa-solid fa-money-check text-white"></i></div>
+                                            <input type="text" class="bg-dracblue border-0 form-control border-bottom text-dracwhite" id="numCuenta" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Salario mensual:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text bg-dracblue border-0"><i class="fa-solid fa-money-bill-wave text-white"></i></div>
+                                            <input type="text" class="bg-dracblue border-0 form-control border-bottom text-dracwhite" id="salario" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Entidad:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text bg-dracblue border-0"><i class="fa-solid fa-industry text-white"></i></div>
+                                            <select class="bg-dracblue border-0 form-control border-bottom text-dracwhite" placeholder="Seleccione..." id="entidad" required>
+                                                <option value="-1" disabled selected>Seleccione...</option>
+                                                {{#if entidades}}
+                                                    {{#each entidades}}
+                                                        <option value="{{entityId}}">{{entityName}}</option>
+                                                    {{/each}}
+                                                {{/if}}
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Ciudad:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text bg-dracblue border-0"><i class="fa-solid fa-city text-white"></i></div>
+                                            <select class="bg-dracblue border-0 form-control border-bottom text-dracwhite" placeholder="Seleccione..." id="ciudad" required>
+                                                <option value="-1" disabled selected>Seleccione...</option>
+                                                {{#if ciudades}}
+                                                    {{#each ciudades}}
+                                                        <option value="{{townId}}">{{townName}}</option>
+                                                    {{/each}}
+                                                {{/if}}
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Tipo planilla:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text bg-dracblue border-0"><i class="fa-solid fa-file-invoice text-white"></i></div>
+                                            <select class="bg-dracblue border-0 form-control border-bottom text-dracwhite" placeholder="Seleccione..." id="planilla" required>
+                                                <option value="-1" disabled selected>Seleccione...</option>
+                                                {{#if planillas}}
+                                                    {{#each planillas}}
+                                                        <option value="{{typeId}}">{{typeDescription}}</option>
+                                                    {{/each}}
+                                                {{/if}}
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Jornada laboral:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text bg-dracblue border-0"><i class="fa-solid fa-user-clock text-white"></i></div>
+                                            <select required class="bg-dracblue border-0 form-control border-bottom text-dracwhite" placeholder="Seleccione..." id="jornada">
+                                                <option value="-1" disabled selected>Seleccione...</option>
+                                                <option value="Diurna">Diurna</option>
+                                                <option value="Nocturna">Nocturna</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Area:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text bg-dracblue border-0"><i class="fa-solid fa-building text-white"></i></div>
+                                            <select class="bg-dracblue border-0 form-control border-bottom text-dracwhite" placeholder="Seleccione..." id="area" required>
+                                                <option value="-1" disabled selected>Seleccione...</option>
+                                                {{#if areas}}
+                                                    {{#each areas}}
+                                                        <option value="{{areaId}}">{{areaDescription}}</option>
+                                                    {{/each}}
+                                                {{/if}}
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-dracblue">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i
+                        class="fas fa-times-circle"></i> Cancelar</button>
+                <button type="submit" class="btn btn-success"><i class="fas fa-save"></i>
+                    Guardar</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

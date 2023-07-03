@@ -1,0 +1,51 @@
+<div class="modal fade" id="nuevaSucursalModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dracblueDark">
+      <div class="modal-header bg-dracblue">
+        <h1 class="modal-title  text-dracorange" id="staticBackdropLabel">Nueva Sucursal</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        <form role="form" id="formNuevaSucursal">
+            <div class="modal-body bg-dracblue">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card bg-dracbluedark text-dracwhite">
+                            <div class="card-header border-white bg-dracbluedark">
+                                <h3>Datos de la sucursal</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Nombre:</label>
+                                            <div class="input-group ">
+                                                <div class="input-group-text bg-dracbluedark border-0"><i class="fa-solid fa-building text-white"></i></div>
+                                                <input type="text" class="bg-dracbluedark border-0 form-control border-bottom text-dracwhite" id="nomSucursal" required autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Direccion:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text bg-dracbluedark border-0"><i class="fa-solid fa-map-location-dot text-white"></i></div>
+                                                <input type="text" class="bg-dracbluedark border-0 form-control border-bottom text-dracwhite" id="dirSucursal" required autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-dracblue">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="fas fa-times-circle"></i> Cancelar</button>
+                <button type="submit" class="btn btn-success"><i class="fas fa-save"></i>
+                    Guardar</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>

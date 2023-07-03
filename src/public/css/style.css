@@ -201,6 +201,10 @@
     border-color: var(--dracPurple) !important;
 }
 
+.form-control{
+    color: var(--dracWhite);
+}
+
 .form-control:focus {
     color: var(--dracWhite);
     background-color: var(--dracBlue);
@@ -254,6 +258,94 @@
 
 
 
+
+/* SWAL DISENO Y SELECTIZE*/
+
+.selectize-control.single .selectize-input.input-active,
+.selectize-input {
+  background: var(--dracBlue-dark) !important;
+  color: var(--dracWhite) !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-size: 1rem !important;
+}
+
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+  font-size: 1rem !important;
+}
+
+.selectize-dropdown .selected {
+  background-color: var(--dracPurple) !important;
+  color: var(--dracWhite) !important;
+}
+
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+  color: var(--dracWhite) !important;
+  font-size: 1rem !important;
+}
+
+.swal2-input {
+  color: var(--dracOrange) !important;
+  font-weight: bold !important;
+  border: 1px solid var(--dracWhite) !important;
+}
+
+.swal2-popup {
+  background: var(--dracBlue-dark) !important;
+  color: var(--dracPurple) !important;
+  font-weight: bold !important;
+}
+
+.swal2-html-container {
+  color: var(--dracWhite) !important;
+  font-weight: bold !important;
+}
+
+.swal2-styled.swal2-confirm {
+  background: var(--dracGreen) !important;
+  color: #000 !important;
+  font-weight: bold !important;
+}
+
+.swal2-styled.swal2-deny {
+  background: var(--dracRed) !important;
+  color: #000 !important;
+  font-weight: bold !important;
+}
+
+.swal2-icon.swal2-info {
+  color: var(--dracLightblue) !important;
+}
+
+.swal2-icon.swal2-success {
+  border-color: #a5dc86 !important;
+  color: var(--dracGreen) !important;
+  font-weight: bold !important;
+}
+
+.swal2-styled.swal2-cancel {
+  color: #000 !important;
+  background-color: var(--dracRed) !important;
+  font-weight: bold !important;
+}
+
+.swal2-icon.swal2-warning {
+  border-color: var(--dracOrange) !important;
+  color: var(--dracPeach) !important;
+}
+
+.swal2-icon.swal2-error {
+  color: var(--dracRed) !important;
+}
+
+.swal2-title {
+  font-weight: bold !important;
+  color: var(--dracPink) !important;
+}
 
 /* ADMIN PANEL*/
 

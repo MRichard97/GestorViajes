@@ -1,0 +1,75 @@
+<div class="d-flex" id="wrapper">
+    {{> sidebar}}
+    <div id="page-content-wrapper">
+        {{> navbar}}
+        <div class="container-fluid px-4 text-dracwhite">
+            <div class="card text-dark bg-dracbluedark mb-3">
+              <div class="card-header bg-dracbluedark text-dracorange">
+                <h5 class="text-center">{{title}}</h5>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label class="form-control-label">Transportista:</label>
+                            <div class="input-group">
+                                <div class="input-group-text bg-dracblue border-0"><i class="fa-solid fa-industry text-white"></i></div>
+                                <select class="bg-dracblue border-0 form-control border-bottom text-dracwhite" placeholder="Seleccione..." id="transportista" required>
+                                    <option value="-1" disabled selected>Seleccione...</option>
+                                    {{#if transportistas}}
+                                        {{#each transportistas}}
+                                            <option value="{{transportistaId}}">{{nombre}}</option>
+                                        {{/each}}
+                                    {{/if}}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label class="form-control-label">Desde:</label>
+                            <div class="input-group mb-2">
+                                <input type="date" id="dateFrom" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label class="form-control-label">Hasta:</label>
+                            <div class="input-group mb-2">
+                                <input type="date" id="dateTo" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <div class="input-group mb-2">
+                                <a href="javascript:generar()" class="btn btn-primary" style="margin-top: 1.5rem;">
+                                    <i class="fa-solid fa-file-excel"></i> Generar Reporte
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                    <table id="reporte" class="table table-dark table-striped table-bordered table-sm text-blanco" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Usuario</th>
+                                <th>Sucursal</th>
+                                <th>Transportista</th>
+                                <th>Distancia</th>
+                                <th>Tarifa</th>
+                                <th>Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/reportes/reporte.js"></script>

@@ -1,0 +1,82 @@
+<div class="modal fade" id="nuevoTransportistaModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dracblueDark">
+      <div class="modal-header bg-dracblue">
+        <h1 class="modal-title  text-dracorange" id="staticBackdropLabel">Nuevo Transportista</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        <form role="form" id="formNuevoTransportista">
+            <div class="modal-body bg-dracblue">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card bg-dracbluedark text-dracwhite">
+                            <div class="card-header border-white bg-dracbluedark">
+                                <h3>Datos del transportista</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Nombre:</label>
+                                            <div class="input-group ">
+                                                <div class="input-group-text bg-dracbluedark border-0"><i class="fa-solid fa-clipboard-user text-white"></i></div>
+                                                <input type="text" class="bg-dracbluedark border-0 form-control border-bottom text-dracwhite" id="nomTransportista" required autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Identidad:</label>
+                                            <div class="input-group ">
+                                                <div class="input-group-text bg-dracbluedark border-0"><i class="fa-solid fa-address-card text-white"></i></div>
+                                                <input type="text" class="bg-dracbluedark border-0 form-control border-bottom text-dracwhite" id="dniTransportista" required autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Telefono:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text bg-dracbluedark border-0"><i class="fa-solid fa-mobile text-white"></i></div>
+                                                <input type="text" class="bg-dracbluedark border-0 form-control border-bottom text-dracwhite" id="telTransportista" required autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Correo:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text bg-dracbluedark border-0"><i class="fa-solid fa-at text-white"></i></div>
+                                                <input type="email" class="bg-dracbluedark border-0 form-control border-bottom text-dracwhite" id="emailTransportista" required autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Tarifa:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text bg-dracbluedark border-0"><i class="fa-solid fa-money-bills text-white"></i></div>
+                                                <input type="text" class="bg-dracbluedark border-0 form-control border-bottom text-dracwhite" id="tarifa" required autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-dracblue">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="fas fa-times-circle"></i> Cancelar</button>
+                <button type="submit" class="btn btn-success"><i class="fas fa-save"></i>
+                    Guardar</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>

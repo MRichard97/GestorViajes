@@ -1,23 +1,49 @@
-<body class="bg-dracdarkestblue">
-    <div class="d-flex" id="wrapper">
-        {{> sidebar}}
-        <div id="page-content-wrapper">
-            {{> navbar}}
-            <div class="container-fluid px-4">
-                <h1>Contenido</h1>
+<div class="d-flex" id="wrapper">
+    {{> sidebar}}
+    <div id="page-content-wrapper">
+        {{> navbar}}
+        <div class="container-fluid px-4 text-dracwhite">
+            {{> sucursales/nuevaSucursal}}
+            <div class="row">
+                <div class="container pb-2">
+                    <div class="row justify-content-end">
+                        <div class="col-1 w-auto">
+                        <a href="javascript:javascript:nuevaSucursalModal()" class="btn btn-sm btn-dracpurple font-weight-bold text-dracwhite">
+                            <i class="fas fa-plus"></i> Nueva Sucursal 
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card text-dark bg-dracbluedark mb-3">
+              <div class="card-header bg-dracbluedark text-dracorange">
+                <h5 class="text-center">{{title}}</h5>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table id="sucursalesTable" class="table table-dark table-striped table-bordered table-sm text-dracwhite" cellspacing="0" width="100%">
+                      {{#if sucursales}}
+                          <thead>
+                              <tr class="bg-dracpurpleDark">
+                                  <th>Nombre</th>
+                                  <th>Direccion</th>
+                              </tr>
+                          </thead>
+                          <tbody >
+                            {{#each sucursales}}
+                                <tr>
+                                    <td>{{nombre}}</td>
+                                    <td>{{direccion}}</td>
+                                </tr>
+                            {{/each}}
+                          </tbody>
+                      {{/if}}
+                  </table>
+                </div>
+              </div>
             </div>
         </div>
     </div>
-    </div>
+</div>
 
-
-</body>
-
-    <script>
-        var el = document.getElementById("wrapper");
-        var toggleButton = document.getElementById("menu-toggle");
-
-        toggleButton.onclick = function () {
-            el.classList.toggle("toggled");
-        };
-    </script>
+<script src="/js/sucursales/nuevaSucursal.js"></script>

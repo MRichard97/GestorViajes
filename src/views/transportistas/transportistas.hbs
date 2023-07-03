@@ -1,0 +1,49 @@
+<div class="d-flex" id="wrapper">
+    {{> sidebar}}
+    <div id="page-content-wrapper">
+        {{> navbar}}
+        <div class="container-fluid px-4 text-dracwhite">
+            {{> transportistas/nuevoTransportista}}
+            <div class="row">
+                <div class="container pb-2">
+                    <div class="row justify-content-end">
+                        <div class="col-1 w-auto">
+                        <a href="javascript:javascript:nuevoTransportistaModal()" class="btn btn-sm btn-dracpurple font-weight-bold text-dracwhite">
+                            <i class="fas fa-plus"></i> Nuevo Transportista 
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card text-dark bg-dracbluedark mb-3">
+              <div class="card-header bg-dracbluedark text-dracorange">
+                <h5 class="text-center">{{title}}</h5>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table id="transportistase" class="table  table-dark table-striped table-bordered table-sm text-dracwhite" cellspacing="0" width="100%">
+                      {{#if transportistas}}
+                          <thead>
+                              <tr class="bg-dracpurpleDark">
+                                  <th>Nombre</th>
+                                  <th>Tarifa</th>
+                              </tr>
+                          </thead>
+                          <tbody >
+                            {{#each transportistas}}
+                                <tr>
+                                    <td>{{nombre}}</td>
+                                    <td>{{tarifa}}</td>
+                                </tr>
+                            {{/each}}
+                          </tbody>
+                      {{/if}}
+                  </table>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/transportistas/nuevoTransportista.js"></script>
